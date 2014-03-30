@@ -118,7 +118,7 @@ automatically set as a listener for the [secureConnection][] event.  The
 `options` object has these possibilities:
 
   - `pfx`: A string or `Buffer` containing the private key, certificate and
-    CA certs of the server in PFX or PKCS12 format. (Mutually exclusive with
+    CA certs of the client in PFX or PKCS12 format. (Mutually exclusive with
     the `key`, `cert` and `ca` options.)
 
   - `key`: A string or `Buffer` containing the private key of the server in
@@ -139,7 +139,7 @@ automatically set as a listener for the [secureConnection][] event.  The
   - `ciphers`: A string describing the ciphers to use or exclude.
 
     To mitigate [BEAST attacks] it is recommended that you use this option in
-    conjunction with the `honorCipherOrder` option described below to
+    conjunction with the `honorCipherOrder` option described below to
     prioritize the non-CBC cipher.
 
     Defaults to `ECDHE-RSA-AES128-SHA256:AES128-GCM-SHA256:RC4:HIGH:!MD5:!aNULL:!EDH`.
